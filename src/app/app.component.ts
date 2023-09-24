@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quest';
+  onomatopoeiaList: Array<string> = ['Bang', 'Paf', 'Boom'];
+
+  onReceiveNewOnomatopia(event: string): void {
+    this.onomatopoeiaList.push(event);
+  }
 }
